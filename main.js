@@ -54,9 +54,6 @@ var iso = new Isotope( elem, {
 }); */
 
 
-$('body').on('show.bs.modal', function () { $('.sticky-top').addClass("fixModal"); }); 
-$('body').on('hidden.bs.modal', function () { $('.sticky-top').removeClass("fixModal"); });
-
 
 
  

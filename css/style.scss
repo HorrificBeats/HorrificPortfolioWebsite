@@ -1,4 +1,24 @@
-/* TODO: Cleanup before continuing */
+
+/* TEST */
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  #content {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .section {
+    min-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    text-align: center;
+    margin: 0 !important;
+  }
+
+/* == */
+
 
 /* PROJECT CSS */
 $globalColor: #5c32d8;
@@ -19,18 +39,21 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background-image: url("/background.png");
+  background-image: url("background.png");
   background-color: $globalAccent;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 100vw 100vh !important;
   color: $globalAccent;
-  padding-right: 6.5%;
+  /* padding-right: 6.5%; */
+  margin:0 !important;
 }
 .globalColor {
   color: $globalColor;
 }
+
+/* .section {
+  min-height:100vh;
+  position: relative;
+} */
 
 .sectionTitle {
   font-family: Mplus 1p;
@@ -39,10 +62,10 @@ body {
   font-size: 48px;
   line-height: 71px;
 
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  margin-bottom: 5.1%;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 5%;
+  padding-bottom: 5.1%;
   text-align: center;
 }
 
@@ -59,7 +82,7 @@ body {
   .navContainer{
     width: 70px; 
     transition: .3s ease-in;
-    height: 65%;
+    height: 200%;
     margin-top: 25%;
     background: $globalColor; 
     border-radius: 25px;
@@ -217,8 +240,9 @@ body {
     font-size: 48px;
     line-height: 71px;
     max-width:600px;
-    margin-top: 23.5%;
-    margin-left: 16%; 
+    position: absolute;
+    top: 23.5%;
+    left: 16%; 
     }
   @media (min-width: 1200px) {
   .homeContent {
@@ -246,66 +270,25 @@ body {
 /* == */
 
 /* ABOUT */
-@media (min-width: 1px) {
-  #profileCardsContainer {
-    flex-wrap: wrap;
-  }
-  .cardLeft {
-    border-right: unset;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.514);
-    border-radius: 25px 25px 0px 0px; 
-  }
-
-  .cardsMiddle {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.514);
-  }
-  .cardRight {
-    border-right: unset;
-    border-radius: 0px 0px 25px 25px
-  }
-}
-
-@media (min-width: 765px) {
-  #profileCardsContainer {
-    flex-wrap:  nowrap;
-  }
-  .cardLeft {
-    border-radius: 25px 0px 0px 25px; 
-    border-right: 1px solid rgba(0, 0, 0, 0.514);
-    border-bottom: none;
-  }
-  .cardsMiddle {
-    border-right: 1px solid rgba(0, 0, 0, 0.514);
-    border-bottom: none;
-  }
-  .cardRight {
-    border-radius: 0px 25px 25px 0px;
-    border-bottom: none;
-  }
-}
-    
-  
-
-  @media (min-width: 1px) {
     .profileCard {
-      /* min-height: 610px; */
-      width: 400px;
-      flex-grow: 0;
+      min-height: 500px;
+      /* width: 400px; */
+      /* flex-grow: 0;
       flex-shrink: 3;
-      flex-basis: 20em;
-     
-    }}
+      flex-basis: 20em; */
+      border-radius: 25px;
+    }
 
-  
-
-
-
+    .profileCardICONS {
+      min-height:100px;
+    }
 
 
   /* TIMELINE */
   .timeline ul {
     /* background: #456990; */
     padding: 50px 0;
+    margin-bottom: 0px !important;
   }
   /* !!Linie Alba */
   .timeline ul li {
@@ -429,10 +412,8 @@ body {
 
 /* PROJECTS */
 
-
-
   #projects {
-    padding-right: 6.5%;
+    /* padding-right: 6.5%; */
 
     .card {
     /*  background: url(https://picsum.photos/200); */
@@ -498,7 +479,7 @@ body {
       /* border-radius: 25px; */
       opacity: 0;
       transition: .5s ease-in;
-      /* transition-delay: .3s; */
+      transition-delay: .2s;
       
     }
 
@@ -511,6 +492,7 @@ body {
     .item {
       height: 300px;
       background: url(https://picsum.photos/400);
+      background-size: cover;
       
       /* border-radius: 25px; */
       width:25%;
@@ -596,6 +578,26 @@ body {
 /* == */
 
 /* CONTACT */
+
+  form {
+    width:65%;
+  }
+
+  input, textarea {
+    border-radius: 25px !important;
+    padding: 10px !important;
+    padding-left: 15px !important;
+  }
+
+  #contactButton {
+    background-color: $globalColor;
+    color:$globalAccent;
+    overflow: hidden;
+    border-radius: 25px !important;
+  }
+
+
+
 /* == */  
 
 /* #home, #about, #projects, #inprogress, #contact {
