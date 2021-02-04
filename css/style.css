@@ -6,7 +6,7 @@ body, html {
 }
 
 #content {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: auto;
 }
 
@@ -16,6 +16,15 @@ body, html {
   position: relative;
   text-align: center;
   margin: 0 !important;
+}
+
+/* .btn {
+    border-radius: 25px !important;
+  } */
+button {
+  border-radius: 25px !important;
+  border: none;
+  padding: 0px 10px 0px 10px;
 }
 
 /* == */
@@ -223,23 +232,27 @@ body {
 }
 
 /* HOME */
+#home img {
+  padding-top: 15%;
+}
+
 .homeContent {
-  margin-left: 10%;
+  margin: 0 auto 0 auto;
   font-family: Mplus 1p;
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
   line-height: 71px;
   max-width: 600px;
-  position: absolute;
-  top: 23.5%;
-  left: 16%;
+  /* position: absolute;
+    top: 23.5%;
+    left: 16%;  */
 }
 
 @media (min-width: 1200px) {
   .homeContent {
-    margin-left: 40%;
-    margin-top: 235px;
+    /* margin-left: 40%; 
+    margin-top: 235px; */
   }
 }
 
@@ -258,6 +271,33 @@ body {
   background: #5c32d8;
   border-radius: 20px;
   padding: .1% 2% .4% 2%;
+}
+
+#socialContainer {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.socialBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #5c32d8;
+  width: 80px;
+  height: 80px;
+  line-height: 75px;
+  border-radius: 50%;
+  border: solid 3px #5c32d8;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.socialBtn:hover {
+  background: #5c32d8;
+  color: #cfba91;
 }
 
 /* == */
@@ -475,7 +515,7 @@ time {
   position: absolute;
   top: 0;
   left: 0;
-  /* border-radius: 25px; */
+  border-radius: 25px;
   opacity: 0;
   -webkit-transition: .5s ease-in;
   transition: .5s ease-in;
@@ -493,25 +533,26 @@ time {
   height: 300px;
   background: url(https://picsum.photos/400);
   background-size: cover;
-  /* border-radius: 25px; */
-  width: 25%;
+  margin: .5%;
+  border-radius: 26px;
+  width: 24%;
 }
 
 @media (max-width: 1200px) {
   #projects .item {
-    width: 33%;
+    width: 32%;
   }
 }
 
 @media (max-width: 992px) {
   #projects .item {
-    width: 50%;
+    width: 49%;
   }
 }
 
 @media (max-width: 576px) {
   #projects .item {
-    width: 100%;
+    width: 99%;
   }
 }
 
@@ -519,7 +560,7 @@ time {
   font-size: 20px;
   font-weight: bold;
   position: relative;
-  top: 5%;
+  top: 17%;
   /* left: 2%; */
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -537,7 +578,7 @@ time {
   font-size: 20px;
   font-weight: bold;
   position: relative;
-  top: 45%;
+  top: 57%;
   text-align: center;
   z-index: 10;
   opacity: 0;
@@ -597,6 +638,7 @@ input, textarea {
   color: #cfba91;
   overflow: hidden;
   border-radius: 25px !important;
+  font-size: 25px;
 }
 
 /* == */
