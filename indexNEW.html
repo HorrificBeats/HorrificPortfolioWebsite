@@ -35,7 +35,7 @@
 <body>
     <div id='NAV' class='col-2 d-flex justify-content-center fixed-top'>  
         <div class="nav">
-            <a href='indexNEW.html'>
+            <a href='#home'>
                 <div class='logoContainer shadow'>
                     <div class='logo'>Horrific DEV</div>
                 </div>
@@ -73,12 +73,12 @@
                 <img src='https://picsum.photos/200/200'>
                 <div class='text-white homeContent'>
                     Hi. I’m <span class='globalColor'>Horia GHEORGHE</span>, I’m a full stack developer.
-                    <a id='homeButton' href='#about.me' role="button"> 
+                    <a id='homeButton' href='#aboutme' role="button"> 
                         <button id='insideHomeButton' class='hover-shadow'>See my work</button>
                     </a>
                 </div>
 
-                <h3 class='text-white mx-auto' style='text-align: center; margin-top: 30%; max-width: 1000px'>
+                <h3 class='text-white mx-auto' style='text-align: center; margin-top: 15%; max-width: 1000px'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis consequuntur eos eius obcaecati numquam nobis, corporis aperiam quisquam atque cum officiisatque cum officiisatque cum officiis sed minus explicabo excepturi quis dicta pariatur fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis consequuntur eos eius obcaecati numquam nobis, corporis aperiam quisquam atque cum officiis sed minus explicabo excepturi quis dicta pariatur fugiat!
                 </h3>
                 <div id='socialContainer'>
@@ -106,8 +106,8 @@
                 <div class='text-white sectionTitle'>ABOUT</div>
 
                 <!-- ProfileCARDS -->
-                <div id='profileCardsContainer' class='row g-0 d-flex justify-content-center col-10 mx-auto'>
-                <div class='col-10 col-md-6 col-lg-4 mb-5'>
+                <div id='profileCardsContainer' class='row g-0 d-flex justify-content-center col-10 mx-auto text-dark'>
+                <div class='col-10 col-md-6 col-lg-4 col-xl-3 mb-5'>
                     <div class='bg-light profileCard d-flex flex-column text-center shadow col-11 mx-auto'>
                         <i class="fas fa-laptop-code fa-3x m-3"></i>
                         <h2> Full Stack  </h2>
@@ -121,7 +121,7 @@
                 </div>
                     
 
-                <div class='col-10 col-md-6 col-lg-4 mb-5'>
+                <div class='col-10 col-md-6 col-lg-4 col-xl-3 mb-5'>
                     <div class='bg-light profileCard d-flex flex-column text-center shadow col-11 mx-auto'>
                         <i class="fas fa-object-ungroup fa-3x m-3"></i>
                         <h2 class='text-center'> Front End </h2>
@@ -140,7 +140,7 @@
                 </div>
                     
 
-                <div class='col-10 col-md-6 col-lg-4 mb-5'>
+                <div class='col-10 col-md-6 col-lg-4 col-xl-3 mb-5'>
                     <div class='bg-light profileCard d-flex flex-column text-center shadow col-11 mx-auto'>
                         <i class="fas fa-terminal fa-3x m-3"></i>
                         <h2 class='text-center'> Back End </h2>
@@ -299,27 +299,29 @@
 
         </div>
 
-        <div id="contact" class="section">
-            <div class='bg-primary d-flex flex-column' style='height: 100vh;'> 
+        <div id="contact" class="section ">
+            <div class='bg-primary' style='min-height: 100vh;'> 
                 <div class='text-white sectionTitle'>CONTACT</div>
-                <div class='bg-dark mx-auto mt-3' style='border-radius: 25px; height: 500px; width: 700px; '>
-                        <div class="d-flex align-items-center justify-content-center" style='height:100%;'>
-                            <form>
-                                <div class="form-group mb-5">
-                                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-                                </div>
-                                <div class="form-group mb-5">
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-                                  </div>
-                                <div class="form-group mb-5">
-                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message..."></textarea>
-                                </div>
-                                <!-- <button data-mdb-ripple-unbound="true" id='contactButton' type="submit" class="btn btn-rounded">Submit</button> -->
+                <div class='row'>
+                    <div class='bg-dark mx-auto mt-3 formContainer col-xl-4 col-lg-4 col-md-8 col-sm-10 col-11'>
+                            <div class="d-flex align-items-center justify-content-center" style='height:100%;'>
+                                <form>
+                                    <div class="form-group mb-5">
+                                    <input type="text" class="form-control formInput" id="exampleFormControlInput1" placeholder="Name">
+                                    </div>
+                                    <div class="form-group mb-5">
+                                        <input type="email" class="form-control formInput" id="exampleFormControlInput1" placeholder="Email">
+                                    </div>
+                                    <div class="form-group mb-5">
+                                    <textarea class="form-control formInput" id="exampleFormControlTextarea1" rows="3" placeholder="Message..."></textarea>
+                                    </div>
+                                    <!-- <button data-mdb-ripple-unbound="true" id='contactButton' type="submit" class="btn btn-rounded">Submit</button> -->
 
-                                <!-- <button type="button" class="btn btn-secondary btn-rounded">Secondary</button> -->
-                                <button id='contactButton'> Submit </button>
-                            </form>
-                        </div>
+                                    <!-- <button type="button" class="btn btn-secondary btn-rounded">Secondary</button> -->
+                                    <button id='contactButton'> Submit </button>
+                                </form>
+                            </div>
+                    </div>
                 </div>  
                 <footer class="bg-dark text-white text-center text-lg-start" style='position:absolute; bottom: 0; width:100%;'>
                     <div class="text-center p-3">
@@ -331,32 +333,22 @@
         </div>
     </div>
 </body>
-    <!-- FLICKITY -->
-    <script>
-        $('.main-carousel').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true
-      });
-    </script>
-    <!-- <script src="slideNav.js" type="text/javascript"></script>
-    <script>
-	    window.slide = new SlideNav({
-		changeHash: true
-	    });
-    </script> -->
-
     <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- PARTICLES -->
         <!-- <script src="particles.js"></script>
         <script src="js/app.js"></script>
-        <script src="/main.js"></script>
+        
         -->
-    
+        <!-- <script src="/main.js"></script> -->
+        <script>
+            function scrollHome() {
+                document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
+              }
+        </script>
     <!-- SMOOTH SCROLL w/Btn Change -->
-        <!-- <script src="slideNav.js" type="text/javascript"></script>
-        <script>window.slide = new SlideNav()</script> -->
+        <script src="slideNav.js" type="text/javascript"></script>
+        <script>window.slide = new SlideNav()</script>
     
     <!-- ISOTOPE -->
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
