@@ -28,11 +28,10 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <!-- CUSTOM -->
-    <link rel="stylesheet" media="screen" href="css/style.css">
-    
+    <link rel="stylesheet" media="screen" href="css/style.css">  
 
 </head>
-<body>
+<body class='m-0'>
     <div id='NAV' class='col-2 d-flex justify-content-center fixed-top'>  
         <div class="nav">
             <a href='#home'>
@@ -69,16 +68,16 @@
     </div>
     <div id='content'>
         <div id="home" class="section">
-            <div class='section bg-dark mx-auto'>
+            <div class='section mx-auto'>
                 <img src='https://picsum.photos/200/200'>
-                <div class='text-white homeContent'>
+                <div class='homeContent'>
                     Hi. I’m <span class='globalColor'>Horia GHEORGHE</span>, I’m a full stack developer.
                     <a id='homeButton' href='#aboutme' role="button"> 
                         <button id='insideHomeButton' class='hover-shadow'>See my work</button>
                     </a>
                 </div>
 
-                <h3 class='text-white mx-auto' style='text-align: center; margin-top: 15%; max-width: 1000px'>
+                <h3 class='mx-auto' style='text-align: center; margin-top: 15%; max-width: 1000px'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis consequuntur eos eius obcaecati numquam nobis, corporis aperiam quisquam atque cum officiisatque cum officiisatque cum officiis sed minus explicabo excepturi quis dicta pariatur fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis consequuntur eos eius obcaecati numquam nobis, corporis aperiam quisquam atque cum officiis sed minus explicabo excepturi quis dicta pariatur fugiat!
                 </h3>
                 <div id='socialContainer'>
@@ -229,7 +228,7 @@
             </div>
             
 
-            <div class="portfolio-item">
+            <div class="portfolio-item" style='margin-right: 1.5%;'>
                 <div class="item class1 shadow">
                         <!-- OVERLAY -->
                         <div class="item-text">
@@ -302,7 +301,7 @@
         <div id="contact" class="section ">
             <div class='bg-primary' style='min-height: 100vh;'> 
                 <div class='text-white sectionTitle'>CONTACT</div>
-                <div class='row'>
+                <div class='row g-0'>
                     <div class='bg-dark mx-auto mt-3 formContainer col-xl-4 col-lg-4 col-md-8 col-sm-10 col-11'>
                             <div class="d-flex align-items-center justify-content-center" style='height:100%;'>
                                 <form>
@@ -315,9 +314,6 @@
                                     <div class="form-group mb-5">
                                     <textarea class="form-control formInput" id="exampleFormControlTextarea1" rows="3" placeholder="Message..."></textarea>
                                     </div>
-                                    <!-- <button data-mdb-ripple-unbound="true" id='contactButton' type="submit" class="btn btn-rounded">Submit</button> -->
-
-                                    <!-- <button type="button" class="btn btn-secondary btn-rounded">Secondary</button> -->
                                     <button id='contactButton'> Submit </button>
                                 </form>
                             </div>
