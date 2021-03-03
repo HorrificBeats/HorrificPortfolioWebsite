@@ -31,94 +31,70 @@
     <link rel="stylesheet" media="screen" href="css/style.css">  
 
 </head>
+
 <body class='m-0'>
-    <div id='NAV' class='col-2 d-flex justify-content-center fixed-top'>  
         <div class="nav">
             <a href='#home'>
-                <div class='logoContainer shadow'>
-                    <div class='logo'>Horrific DEV</div>
+                <div class='logoContainerContainer shadow'>
+                    <div class='logoContainer '>
+                        <div class='logo'>Horrific DEV</div>
+                    </div>
                 </div>
+                
             </a>
-            <!-- <nav class='navContainer mx-auto p-1 shadow'>
-                <div class='d-flex flex-column justify-content-around h-100'>
-                    <a href='#home' class='navLinks'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 20">
-                            <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                        </svg>
-                    </a>
-                    <a href='#aboutme' class='navLinks'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 20">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                        </svg>
-                    </a> 
-                    <a href='#projects' class='navLinks'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-files" viewBox="0 0 16 20">
-                            <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
-                        </svg>
-                    </a> 
-                    <a href='#contact' class='navLinks'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 20">
-                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-                        </svg>
-                    </a>
-                </div>
-            </nav> -->
+            
         </div>
-    </div>
     <div id='content'>
         <div id="home" class="section">
-            <div class='section mx-auto'>
-                <img src='https://picsum.photos/200/200'>
+            <div class='mx-auto container'>
+                
                 <div class='homeContent'>
+                    <div id='mePhoto' class='mx-auto shadow'></div>
                     Hi. I’m <span class='globalColor'>Horia GHEORGHE</span>, I’m a full stack developer.
                     <a id='homeButton' href='#aboutme' role="button"> 
-                        <button id='insideHomeButton' class='hover-shadow'>See my work</button>
+                        <button id='insideHomeButton' class='hover-shadow shadow'>See more</button>
                     </a>
                 </div>
 
                 <h3 class='mx-auto' style='text-align: center; margin-top: 15%; max-width: 1000px'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis consequuntur eos eius obcaecati numquam nobis, corporis aperiam quisquam atque cum officiisatque cum officiisatque cum officiis sed minus explicabo excepturi quis dicta pariatur fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis consequuntur eos eius obcaecati numquam nobis, corporis aperiam quisquam atque cum officiis sed minus explicabo excepturi quis dicta pariatur fugiat!
                 </h3>
-                <div id='socialContainer'>
-                    <a class='socialBtn'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                        </svg>
-                    </a>
-                    <a class='socialBtn'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                    </a>
-                    <a class='socialBtn'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                            <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
-                        </svg>
-                    </a>
+                <div id='socialContainer' class='row'>
+                    <div class='pt-3 col-lg-4 col-12'>
+                        <a class='socialBtn shadow'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class='pt-3 col-lg-4 col-12'>
+                        <a class='socialBtn shadow'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class='pt-3 col-lg-4 col-12'>
+                        <a class='socialBtn shadow'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                        
                 </div>
+                <section class="curved"></section>
             </div>
         </div>
 
-        <div id="aboutme" class="section bg-primary">
+        <div id="aboutme" class="section">
                 <!-- <div class='col-2'> Placeholder </div> -->
-                <div class='text-white sectionTitle'>ABOUT</div>
+                <div class='sectionTitle'>ABOUT</div>
 
                 <!-- ProfileCARDS -->
-                <div id='profileCardsContainer' class='row g-0 d-flex justify-content-center col-10 mx-auto text-dark'>
-                <div class='col-10 col-md-6 col-lg-4 col-xl-3 mb-5'>
-                    <div class='bg-light profileCard d-flex flex-column text-center shadow col-11 mx-auto'>
-                        <i class="fas fa-laptop-code fa-3x m-3"></i>
-                        <h2> Full Stack  </h2>
-                        
-                        <h4>Languages:</h4>
-                            <p>HTML, CSS, Sass, Twig </p>
-
-                        <h4>Back End:</h4>
-                        <h4>Data:</h4>
-                    </div>
-                </div>
-                    
+                <div id='profileCardsContainer' class='row g-0 d-flex justify-content-center col-10 mx-auto text-dark'>  
 
                 <div class='col-10 col-md-6 col-lg-4 col-xl-3 mb-5'>
                     <div class='bg-light profileCard d-flex flex-column text-center shadow col-11 mx-auto'>
@@ -155,7 +131,20 @@
                             <p>Github</p>
                             <p>Terminal</p>
                     </div> 
-                </div>                    
+                </div>
+                
+                <div class='col-10 col-md-6 col-lg-4 col-xl-3 mb-5'>
+                    <div class='bg-light profileCard d-flex flex-column text-center shadow col-11 mx-auto'>
+                        <i class="fas fa-laptop-code fa-3x m-3"></i>
+                        <h2> Full Stack  </h2>
+                        
+                        <h4>Languages:</h4>
+                            <p>HTML, CSS, Sass, Twig </p>
+
+                        <h4>Back End:</h4>
+                        <h4>Data:</h4>
+                    </div>
+                </div>
                      
                 </div>
 
@@ -163,7 +152,7 @@
                 <!-- TIMELINE -->
                 <section class="timeline">
                     <ul class='p-0'>
-                        <div class='h2 text-light subsectionTitle'> FORMATIONS / PARCOURRS PROFESSIONNEL </div>
+                        <div class='h2 subsectionTitle'> FORMATIONS / PARCOURRS PROFESSIONNEL </div>
                         <li>
                             <div class='shadow'>
                             <time>2020</time> Titre Developer Web & Web Mobile
@@ -215,15 +204,17 @@
                 </section>
         </div>
 
-
-        <div id="projects" class="section bg-warning">
-            <div class='text-white sectionTitle'>PROJECTS</div>
+        <div id="projects" class="section">
+            <div class='sectionTitle'>PROJECTS</div>
             <div class="portfolio-menu mt-5 mb-5">
                 <ul>
-                    <li class="active shadow" data-filter="*">ALL</li>
-                    <li class='shadow' data-filter=".class1">Javascript</li>
-                    <li class='shadow' data-filter=".class2">Symfony</li>
-                    <li class='shadow' data-filter=".class3">SASS</li>
+                    <li class="active shadow mt-2" data-filter="*">ALL</li>
+                    <li class='shadow mt-2' data-filter=".class1">Javascript</li>
+                    <li class='shadow mt-2' data-filter=".class2">Symfony</li>
+                    <li class='shadow mt-2' data-filter=".class3">SASS</li>
+                    <li class='shadow mt-2' data-filter=".class4">Javascript1</li>
+                    <li class='shadow mt-2' data-filter=".class5">Symfony1</li>
+                    <li class='shadow mt-2' data-filter=".class6">SASS1</li>
                 </ul>
             </div>
             
@@ -298,9 +289,9 @@
 
         </div>
 
-        <div id="contact" class="section ">
-            <div class='bg-primary' style='min-height: 100vh;'> 
-                <div class='text-white sectionTitle'>CONTACT</div>
+        <div id="contact" class="section">
+            <div class='' style='padding-bottom: 15%; min-height:100vh;'> 
+                <div class='sectionTitle'>CONTACT</div>
                 <div class='row g-0'>
                     <div class='bg-dark mx-auto mt-3 formContainer col-xl-4 col-lg-4 col-md-8 col-sm-10 col-11'>
                             <div class="d-flex align-items-center justify-content-center" style='height:100%;'>
@@ -322,7 +313,7 @@
                 <footer class="bg-dark text-white text-center text-lg-start" style='position:absolute; bottom: 0; width:100%;'>
                     <div class="text-center p-3">
                       © 2021 Copyright: 
-                      <a class="text-white" href="https://mdbootstrap.com/">HorrificDEV</a>
+                      <a class="text-white" href="#">HorrificDEV</a>
                     </div>
                   </footer>
             </div>
