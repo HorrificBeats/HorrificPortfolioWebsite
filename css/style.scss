@@ -6,6 +6,8 @@
   --accent: #5c32d8;
 
   --logo: #5c32d8;
+  --logo-backround: rgba( 255, 255, 255, 0.25 );
+  --logo-hover-back:#5c32d8;
 }
 
 [data-theme="dark"] {
@@ -15,6 +17,8 @@
   --accent: #8057fe;
 
   --logo: #ffffff;
+  --logo-backround: #8057fe;
+  --logo-hover-back:rgba( 255, 255, 255, 0.25 );
 }
 
 .containerTest {
@@ -52,6 +56,7 @@
     color: var(--accent);
   }
 //
+
 
 /* GENERAL */
   html::-webkit-scrollbar {
@@ -120,7 +125,7 @@
     height: 100px; 
     background: none; 
     border: 3px solid $globalColor;
-    background: rgba( 255, 255, 255, 0.25 );
+    background: var(--logo-backround);
     background-clip: inherit;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -128,10 +133,10 @@
     border: none;
     transition: .3s ease-in;
     &:hover {
-      background: var(--accent);
+      background: var(--logo-hover-back);
       transition: .2s ease-in-out;
       .logo {
-        color:$globalAccent;
+        color:white;
       }
     }
   }
@@ -350,8 +355,11 @@
 
 
 /* ABOUT */
+
+
   .profileCard {
-    min-height: 500px;
+    min-height: 600px;
+    max-width: 400px;
     border-radius: 50px 50px 25px 25px;
     transition: .2s ease-in;
     &:hover {
@@ -417,9 +425,36 @@
       background: $globalAccent !important;
       transition: .3s ease;
       color: black;
-      cursor: pointer;
+      }
     }
+    #resumeLink{
+      background: none;
+      color: var(--accent);
+      border: 4px solid var(--accent);
+      transition: .5s ease;
+      &:hover {
+        background: var(--accent) !important;
+        color: white;
+        transition: .5s ease;
+        #resumeLogo {
+          transform: translate(298%, 0px);
+          background: var(--accent) !important;
+          color: white;
+          transition: .5s ease;
+        }
+      }
     }
+    #resumeLogo{
+      position:absolute; 
+      height:100%; 
+      width:25%; 
+      left:0px; 
+      border-radius: 18px; 
+      padding-top: 22px;
+      transform: translate(0px, 0px);
+      transition: .5s ease;
+    }
+
 
     /* Text BOX alternative placing */
     .timeline ul li:nth-child(odd) div {
@@ -482,20 +517,20 @@
 
     @media screen and (max-width: 1139px) {
       .timeline ul li div {
-        width: 250px;
+        width: 400px;
       }
       .timeline ul li:nth-child(even) div {
-        left: -289px;
+        left: -440px;
         /*250+45-6*/
       }
     }
 
-    @media screen and (max-width: 790px) {
+    @media screen and (max-width: 900px) {
       .timeline ul li {
-        margin-left: 4vw;
+        margin-left: 1px;
       }
       .timeline ul li div {
-        width: 61vw;
+        width:65vw;
       }
       .timeline ul li:nth-child(even) div {
         left: 45px;
@@ -557,7 +592,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      border-radius: 25px;
+      border-radius: 26px;
       opacity: 0;
       transition: .5s ease-in;
       transition-delay: .2s;
@@ -568,7 +603,9 @@
     .item:hover::after {
       transition: .5s ease;
       opacity: .9;
-      
+      .item {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      }
     }
 
     .item {
@@ -579,6 +616,7 @@
       margin-left: 1.5%;
       border-radius: 26px;
       width:23.5%;
+      
     }
 
     
@@ -670,6 +708,7 @@
     min-height: 10vh; 
     /* width: 700px; */
     padding: 5% 4% 3% 5%;
+    min-width: 500px;
   }
 
   textarea {
