@@ -760,7 +760,7 @@
 /* CONTACT */
   .formContainer {
     margin-top: 7vh !important;
-    background-color: var(--logo-backround);
+    background-color: rgba(255, 255, 255, 0.68);
     border-radius: 25px; 
     min-height: 10vh; 
     /* width: 700px; */
@@ -799,7 +799,9 @@
   .formInput:focus {
     background-color: $globalAccent;
     color: black;
+    transition: .3s ease;
   }
+  
 
   .formInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(255, 255, 255);
@@ -810,7 +812,7 @@
     color: black;
   }
   
-  #contactButton {
+  /* #contactButton {
     background-color: var(--accent);
     color:white;
     overflow: hidden;
@@ -825,6 +827,268 @@
       color: var(--accent);
       transition: .3s ease;
     }
+  } */
+
+  /* contactButton ANIMATIONS on Form Submission */
+  #contactButton {
+    position: relative;
+    overflow: hidden;
+    width: 7rem;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    border-radius: 1.5rem;
+    font-size: 1.125rem;
+    text-transform: lowercase;
+    outline: none;
+    transition: transform 0.225s;
+  }
+
+
+  #contactButton:active {
+      transform: scale(0.9, 0.9);
+  }
+
+  #contactButton:before,
+  #contactButton:after {
+      position: absolute;
+      opacity: 0;
+      border-radius: 50%;
+      background-color: #fff;
+      top: 50%;
+      left: 50%;
+      margin-top: -1.125rem;
+      margin-left: -1.125rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      content: "";
+      z-index: 1;
+  }
+
+  #contactButton.loading {
+      animation: button-loading 0.5s forwards;
+  }
+
+  #contactButton.loading:before {
+      opacity: 1;
+      animation: button-dot-intro 0.5s forwards;
+  }
+
+  #contactButton.loading:after {
+      opacity: 0;
+      animation: button-dot-pulse 1.5s infinite 0.5s;
+  }
+
+  #contactButton.ready {
+      text-indent: 0;
+      color: transparent;
+      background-color: var(--accent);
+      animation: button-ready 0.333s forwards;
+  }
+
+  #contactButton.ready:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: auto;
+      margin: 0;
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background-color: transparent;
+      color: #8cce1e !important;
+      content: "success!";
+      opacity: 0;
+      z-index: 2;
+      animation: button-ready-label 0.5s forwards 0.275s;
+  }
+
+  #contactButton.ready:after {
+      opacity: 1;
+      animation: button-dot-outro 0.333s;
+  }
+
+  #contactButton.error {
+      text-indent: 0;
+      color: transparent;
+      background-color: var(--accent);
+      animation: button-error 0.333s forwards;
+  }
+
+  #contactButton.error:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: auto;
+      margin: 0;
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background-color: transparent;
+      color: #ce3e1e;
+      content: "error";
+      opacity: 0;
+      z-index: 2;
+      animation: button-error-label 0.5s forwards 0.275s;
+  }
+
+  #contactButton.error:after {
+      opacity: 1;
+      animation: button-dot-outro 0.333s;
+  }
+
+  @keyframes button-loading {
+    20% {
+        color: transparent;
+        transform: scale(1, 1);
+    }
+
+    40% {
+        border-color: var(--accent);
+        background-color: transparent;
+        transform: scale(1, 1);
+    }
+
+    60% {
+        transform: scale(0.7, 1.1);
+        margin-left: 1.25rem;
+        width: 2.5rem;
+        text-indent: -0.6125rem;
+        color: transparent;
+        border-color: var(--accent);
+        background-color: var(--accent);
+    }
+
+    80% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        margin-left: 1.25rem;
+        width: 2.5rem;
+        background-color: var(--accent);
+        border-color: var(--accent);
+        color: transparent;
+    }
+  }
+
+  @keyframes button-dot-intro {
+      0% {
+          opacity: 0;
+      }
+
+      60% {
+          opacity: 1;
+          transform: scale(1, 1);
+      }
+
+      100% {
+          transform: scale(0.75, 0.75);
+      }
+  }
+
+  @keyframes button-dot-pulse {
+      0% {
+          opacity: 1;
+          transform: scale(0.6, 0.6);
+      }
+      
+
+      50% {
+          transform: scale(0.95, 0.95);
+      }
+
+      100% {
+          opacity: 1;
+          transform: scale(0.6, 0.6);
+      }
+  }
+
+  @keyframes button-ready {
+      0% {
+          margin-left: 1.25rem;
+          width: 2.5rem;
+      }
+
+      10% {
+          background-color: var(--accent);
+          border-color: var(--accent);
+      }
+
+      70% {
+          margin: 0;
+          width: 7.25rem;
+          background-color: #fff;
+          transform: scale(1.1, 1.1);
+      }
+
+      100% {
+          margin: 0;
+          width: 7rem;
+          border-color: #8cce1e;
+          background-color: #fff;
+      }
+  }
+
+  @keyframes button-error {
+      0% {
+          margin-left: 1.25rem;
+          width: 2.5rem;
+      }
+
+      10% {
+          background-color: var(--accent);
+          border-color: var(--accent);
+      }
+
+      70% {
+          margin: 0;
+          width: 7.25rem;
+          background-color: #fff;
+          transform: scale(1.1, 1.1);
+      }
+
+      100% {
+          margin: 0;
+          width: 7rem;
+          border-color: #ce3e1e;
+          background-color: #fff;
+      }
+  }
+
+  @keyframes button-dot-outro {
+      0% {
+          opacity: 1;
+      }
+
+      100% {
+          opacity: 0;
+          transform: scale(1, 1);
+      }
+  }
+
+  @keyframes button-ready-label {
+      0% {
+          opacity: 0;
+      }
+
+      100% {
+          opacity: 1;
+      }
+  }
+
+  @keyframes button-error-label {
+      0% {
+          opacity: 0;
+      }
+
+      100% {
+          opacity: 1;
+      }
   }
 
 /* == */  

@@ -847,15 +847,17 @@
                                 <form id='contact-form'>
                                     <div class="form-group mb-5">
                                         <input type="hidden" name="contact_number">
-                                        <input type="text" class="form-control formInput" id="exampleFormControlInput1" placeholder="Name">
+                                        <input type="text" class="form-control formInput" id="exampleFormControlInput1" placeholder="Name" name="user_name" required>
                                     </div>
                                     <div class="form-group mb-5">
-                                        <input type="email" class="form-control formInput" id="exampleFormControlInput1" placeholder="Email">
+                                        <input type="email" class="form-control formInput" id="exampleFormControlInput1" placeholder="Email" name="user_email" required>
                                     </div>
                                     <div class="form-group mb-5">
-                                    <textarea class="form-control formInput" id="exampleFormControlTextarea1" rows="3" placeholder="Message..."></textarea>
+                                        <textarea class="form-control formInput" id="exampleFormControlTextarea1" rows="3" placeholder="Message..." name='message' required></textarea>
                                     </div>
-                                    <input type='submit' id='contactButton' value='Submit'> 
+                                    <!-- <input type='submit' id='contactButton' value='Submit'>  -->
+
+                                    <button id='contactButton' class='' type="submit"> SEND </button>
                                 </form>
                             </div>
                     </div>
@@ -967,7 +969,47 @@
         </script>
 
     <!-- Email.js Form Submit -->
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init("user_caTNcm62vLBFr1ORciLsn");
+        })();
+    </script>
 
+    <script type="text/javascript">
+
+        window.onload = function () {
+            //Detects submit action
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const contactBTN = document.getElementById('contactButton');
+                contactBTN.classList.add('loading');
+
+
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_8sx288b', 'template_os0nfov', this)
+                    .then(function () {
+                        setTimeout(function () {
+                            contactBTN.classList.remove('loading');
+                            contactBTN.classList.add('ready');
+                        }, 1000);
+                        console.log('SUCCESS!');
+
+                    }, function (error) {
+                        setTimeout(function () {
+                            contactBTN.classList.remove('loading');
+                            contactBTN.classList.add('error');
+                            //alert('booo');
+                        }, 1000);
+                        
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
 
 
