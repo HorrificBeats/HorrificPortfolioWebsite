@@ -43,15 +43,14 @@
   right: 15px;
   bottom: 15px;
   z-index: 1000;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   opacity: .9;
   transition: .3s ease;
 
   &:hover {
     background-color: var(--primary);
     opacity: 1;
-    border-radius: 15px !important;
     transition: .3s ease;
   }
   &:focus {
@@ -100,6 +99,10 @@
     margin: auto;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   
 
   /* Material Buttons */
@@ -130,15 +133,10 @@
   }
 
   .logo__inside {
-    /*   */
-    /* background: none; 
-    border: 3px solid $globalColor; */
     background: var(--logo-backround);
     background-clip: inherit;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    /* border-radius: 25px; */
-    /* border: none; */
     transition: .3s ease-in;
     &:hover {
       background: var(--logo-hover-back);
@@ -156,8 +154,8 @@
     
       &__inside {
       border-radius: 18px;
-      width: 150px; 
-      height: 150px; 
+      width: 140px; 
+      height: 140px; 
       } 
       &__text {
         color: var(--logo); 
@@ -166,9 +164,9 @@
         font-weight: 800; 
         font-size: 36px; 
         line-height: 45px; 
-        text-align:right; 
-        padding-right:6%; 
-        padding-top:19%;
+        text-align:right;
+        /* padding-right: 3.5%; 
+        padding-top:19%; */
         transition: .3s ease-in;
       }
     }
@@ -191,8 +189,8 @@
         font-style: bold; 
         font-weight: 800;
         line-height: 130%; 
-        padding-top:19%;
-        padding-right:4%;
+        /* padding-top:19%;
+        padding-right:4%; */
         transition: .3s ease-in; 
         z-index: 999 !important;
       }
@@ -215,8 +213,8 @@
         font-size: 19px; 
         line-height: 25px; 
         text-align:right; 
-        padding-right:6%; 
-        padding-top:19%;
+        /* padding-right:6%; 
+        padding-top:19%; */
         transition: .3s ease-in;
       }
     }
@@ -271,29 +269,26 @@
 
   .home__header__mephoto {
     content: "";
-    background: url('../images/profile.png');
+    background: url('../images/profile.jpg');
     background-size: contain;
-    height:280px;
-    width:280px;
+    height:230px;
+    width:230px;
     border-radius: 150px;
   }
 
   .home__header {
     margin: 0 auto 0 auto;
-    /* padding-top: 150px; */
     font-family: Mplus 1p;
     font-style: normal;
     font-weight: 800;
-    font-size: 48px;
-    line-height: 71px;
-    max-width:600px;
+    font-size: 40px;
+    max-width:480px;
   }
  
 
   #homeButton {
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 59px;
+    font-size: 25px;
+    line-height: 42px;
   }
 
   #insideHomeButton {
@@ -327,16 +322,20 @@
       display: inline-block;
       text-decoration: none;
       color: var(--accent);
-      line-height: 75px;
+      /* line-height: 75px; */
       border-radius: 50%;
-      border: solid 3px var(--accent);
+      border: solid 2px var(--accent);
       text-align: center;
       overflow: hidden;
       font-weight: bold;
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       transition: .4s;
       /* z-index:999 !important; */
+      svg {
+        margin-top: 21.5%;
+      }
+
 
       animation: load 500ms ease-in;
     }
@@ -561,6 +560,7 @@
   .interestsCards {
     border-radius: 25px !important;
     overflow: hidden;
+    min-width: 280px;
     
     &__header {
       background: var(--interestsCards__header);
@@ -599,7 +599,7 @@
       margin: 0;
       list-style: none;
       padding:10px 15px;
-      border: 2px solid var(--accent);
+      border: 1px solid var(--accent);
       border-radius: 25px;
       color: white;
       font-weight: bold;
@@ -624,7 +624,7 @@
       content: "";
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.475);
+      background-color: rgba(255, 255, 255, 0.577);
       background-size: contain;
       position: absolute;
       top: 0;
@@ -686,7 +686,6 @@
 
 
     .item-text {
-      color: black;
       font-size: 20px;
       font-weight: bold;
       position: relative;
@@ -816,6 +815,7 @@
     color:white;
     overflow: hidden;
     border-radius: 15px !important;
+    border: none;
     font-size: 25px;
     padding: .5% 3% .5% 3%;
     transition: .3s ease;
