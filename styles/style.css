@@ -302,7 +302,7 @@ footer {
 }
 
 .socialBtn {
-  float: right;
+  /* float: right;  */
   display: inline-block;
   text-decoration: none;
   color: var(--accent);
