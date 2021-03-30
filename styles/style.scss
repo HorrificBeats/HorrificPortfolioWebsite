@@ -13,6 +13,10 @@
 
   --interestsCards__header: rgba(255, 255, 255, 0.25);
   --interestCards__body: rgba(92, 92, 92, 0.25);
+
+  --contactForm: #fff;
+  --contactButton__error: #ce3e1e;
+  --contactButton__success:#8cce1e;
 }
 
 [data-theme="dark"] {
@@ -28,6 +32,10 @@
 
   --interestsCards__header: rgba(92, 92, 92, 0.25);
   --interestCards__body: rgba(255, 255, 255, 0.25);
+
+    --contactForm: rgb(36, 36, 36);
+  --contactButton__error: #e8401a;
+  --contactButton__success:#90de14;
 }
 
 .containerTest {
@@ -243,7 +251,7 @@
 
       padding-left: auto;
       padding-right: auto;
-      padding-top: 10%;
+      padding-top: 5%;
       padding-bottom: 10%;
       text-align: center;
     }
@@ -318,8 +326,7 @@
 
 
     .socialBtn{
-      /* float: right;  */
-      display: inline-block;
+      float: right; 
       text-decoration: none;
       color: var(--accent);
       /* line-height: 75px; */
@@ -331,7 +338,6 @@
       width: 70px;
       height: 70px;
       transition: .4s;
-      /* z-index:999 !important; */
       svg {
         margin-top: 21.5%;
       }
@@ -730,6 +736,14 @@
       }
     }
 
+    /* Modal */
+    .modalImage {
+      background-size: cover; 
+      background-position: center; 
+      height: 330px; 
+      border-radius: 5px;
+    }
+
     /* Buttons */
     .projectButton {
       background-color: none;
@@ -759,8 +773,8 @@
 
 /* CONTACT */
   .formContainer {
-    margin-top: 7vh !important;
-    background-color: rgba(255, 255, 255, 0.68);
+    /* margin-top: 7vh !important; */
+    background-color: var(--contactForm);
     border-radius: 25px; 
     min-height: 10vh; 
     /* width: 700px; */
@@ -836,7 +850,7 @@
     width: 7rem;
     color: var(--accent);
     border: 2px solid var(--accent);
-    background-color: transparent;
+    background-color: var(--contactForm);
     cursor: pointer;
     line-height: 2;
     margin: 0;
@@ -845,7 +859,9 @@
     font-size: 1.125rem;
     text-transform: lowercase;
     outline: none;
+
     transition: transform 0.225s;
+    /* margin-right: 0px !important; */
   }
 
 
@@ -858,7 +874,7 @@
       position: absolute;
       opacity: 0;
       border-radius: 50%;
-      background-color: #fff;
+      background-color: transparent;
       top: 50%;
       left: 50%;
       margin-top: -1.125rem;
@@ -869,77 +885,141 @@
       z-index: 1;
   }
 
-  #contactButton.loading {
-      animation: button-loading 0.5s forwards;
-  }
+  /* LOADING */
+    #contactButton.loading {
+        animation: button-loading 0.5s forwards;
+    }
 
-  #contactButton.loading:before {
-      opacity: 1;
-      animation: button-dot-intro 0.5s forwards;
-  }
+    #contactButton.loading:before {
+        opacity: 1;
+        animation: button-dot-intro 0.5s forwards;
+    }
 
-  #contactButton.loading:after {
-      opacity: 0;
-      animation: button-dot-pulse 1.5s infinite 0.5s;
-  }
+    #contactButton.loading:after {
+        opacity: 0;
+        animation: button-dot-pulse 1.5s infinite 0.5s;
+    }
+  /*  */
 
-  #contactButton.ready {
+  /* READY */
+    #contactButton.ready {
+        text-indent: 0;
+        color: transparent;
+        background-color: var(--accent);
+        animation: button-ready 0.333s forwards;
+    }
+
+    #contactButton.ready:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: auto;
+        margin: 0;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background-color: transparent;
+        color: var(--contactButton__success);
+        content: "success!";
+        opacity: 0;
+        z-index: 2;
+        animation: button-ready-label 0.5s forwards 0.275s;
+    }
+
+    #contactButton.ready:after {
+        opacity: 1;
+        animation: button-dot-outro 0.333s;
+    }
+  /*  */
+  
+  /* ERROR */
+    #contactButton.error {
+        text-indent: 0;
+        color: transparent;
+        background-color: var(--accent);
+        animation: button-error 0.333s forwards;
+    }
+
+    #contactButton.error:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: auto;
+        margin: 0;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background-color: transparent;
+        color: var(--contactButton__error);
+        content: "error";
+        opacity: 0;
+        z-index: 2;
+        animation: button-error-label 0.5s forwards 0.275s;
+    }
+
+    #contactButton.error:after {
+        opacity: 1;
+        animation: button-dot-outro 0.333s;
+    }
+  /*  */
+
+  /* TRY AGAIN */
+    #contactButton.tryAgain {
       text-indent: 0;
       color: transparent;
       background-color: var(--accent);
-      animation: button-ready 0.333s forwards;
+      animation: button-tryAgain 0.333s forwards;
+    }
+
+    #contactButton.tryAgain:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: auto;
+        margin: 0;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background-color: transparent;
+        color: var(--accent);
+        content: "try again";
+        opacity: 0;
+        z-index: 2;
+        animation: button-ready-label 0.5s forwards 0.275s;
+    }
+
+    #contactButton.tryAgain:after {
+        opacity: 1;
+        animation: button-dot-outro 0.333s;
+    }
+  /*  */
+
+  @keyframes button-tryAgain {
+    0% {
+        margin-left: 1.25rem;
+        width: 2.5rem;
+    }
+
+    10% {
+        background-color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    70% {
+        margin: 0;
+        width: 7.25rem;
+        background-color: var(--contactForm);
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        margin: 0;
+        width: 7rem;
+        border-color: var(--accent);
+        background-color: var(--contactForm);
+    }
   }
 
-  #contactButton.ready:before {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: auto;
-      margin: 0;
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      background-color: transparent;
-      color: #8cce1e !important;
-      content: "success!";
-      opacity: 0;
-      z-index: 2;
-      animation: button-ready-label 0.5s forwards 0.275s;
-  }
-
-  #contactButton.ready:after {
-      opacity: 1;
-      animation: button-dot-outro 0.333s;
-  }
-
-  #contactButton.error {
-      text-indent: 0;
-      color: transparent;
-      background-color: var(--accent);
-      animation: button-error 0.333s forwards;
-  }
-
-  #contactButton.error:before {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: auto;
-      margin: 0;
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      background-color: transparent;
-      color: #ce3e1e;
-      content: "error";
-      opacity: 0;
-      z-index: 2;
-      animation: button-error-label 0.5s forwards 0.275s;
-  }
-
-  #contactButton.error:after {
-      opacity: 1;
-      animation: button-dot-outro 0.333s;
-  }
 
   @keyframes button-loading {
     20% {
@@ -1022,15 +1102,15 @@
       70% {
           margin: 0;
           width: 7.25rem;
-          background-color: #fff;
+          background-color: var(--contactForm);
           transform: scale(1.1, 1.1);
       }
 
       100% {
           margin: 0;
           width: 7rem;
-          border-color: #8cce1e;
-          background-color: #fff;
+          border-color: var(--contactButton__success);
+          background-color: var(--contactForm);
       }
   }
 
@@ -1048,15 +1128,15 @@
       70% {
           margin: 0;
           width: 7.25rem;
-          background-color: #fff;
+          background-color: var(--contactForm);
           transform: scale(1.1, 1.1);
       }
 
       100% {
           margin: 0;
           width: 7rem;
-          border-color: #ce3e1e;
-          background-color: #fff;
+          border-color: var(--contactButton__error);
+          background-color: var(--contactForm);
       }
   }
 

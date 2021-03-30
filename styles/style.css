@@ -11,6 +11,9 @@
   --logo-hover-back:#5c32d8;
   --interestsCards__header: rgba(255, 255, 255, 0.25);
   --interestCards__body: rgba(92, 92, 92, 0.25);
+  --contactForm: #fff;
+  --contactButton__error: #ce3e1e;
+  --contactButton__success:#8cce1e;
 }
 
 [data-theme="dark"] {
@@ -23,6 +26,9 @@
   --logo-hover-back:#8057fe;
   --interestsCards__header: rgba(92, 92, 92, 0.25);
   --interestCards__body: rgba(255, 255, 255, 0.25);
+  --contactForm: rgb(36, 36, 36);
+  --contactButton__error: #e8401a;
+  --contactButton__success:#90de14;
 }
 
 .containerTest {
@@ -224,7 +230,7 @@ footer {
   line-height: 71px;
   padding-left: auto;
   padding-right: auto;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-bottom: 10%;
   text-align: center;
 }
@@ -302,8 +308,7 @@ footer {
 }
 
 .socialBtn {
-  /* float: right;  */
-  display: inline-block;
+  float: right;
   text-decoration: none;
   color: var(--accent);
   /* line-height: 75px; */
@@ -316,7 +321,6 @@ footer {
   height: 70px;
   -webkit-transition: .4s;
   transition: .4s;
-  /* z-index:999 !important; */
   -webkit-animation: load 500ms ease-in;
           animation: load 500ms ease-in;
 }
@@ -602,6 +606,13 @@ time {
 #projects {
   /* OVERLAY */
   /* OVERLAY HOVER */
+  /* Modal */
+  /* .modalImageAlt {
+      background-size: cover; 
+      background-position: center; 
+      height: 550px; 
+      border-radius: 5px;
+    } */
   /* Buttons */
 }
 
@@ -763,6 +774,13 @@ time {
           transform: translate(0px, -50px);
 }
 
+#projects .modalImage {
+  background-size: cover;
+  background-position: center;
+  height: 330px;
+  border-radius: 5px;
+}
+
 #projects .projectButton {
   background-color: none;
   cursor: pointer;
@@ -789,8 +807,8 @@ time {
 /* == */
 /* CONTACT */
 .formContainer {
-  margin-top: 7vh !important;
-  background-color: rgba(255, 255, 255, 0.68);
+  /* margin-top: 7vh !important; */
+  background-color: var(--contactForm);
   border-radius: 25px;
   min-height: 10vh;
   /* width: 700px; */
@@ -890,7 +908,7 @@ form {
   width: 7rem;
   color: var(--accent);
   border: 2px solid var(--accent);
-  background-color: transparent;
+  background-color: var(--contactForm);
   cursor: pointer;
   line-height: 2;
   margin: 0;
@@ -903,6 +921,7 @@ form {
   transition: -webkit-transform 0.225s;
   transition: transform 0.225s;
   transition: transform 0.225s, -webkit-transform 0.225s;
+  /* margin-right: 0px !important; */
 }
 
 #contactButton:active {
@@ -915,7 +934,7 @@ form {
   position: absolute;
   opacity: 0;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: transparent;
   top: 50%;
   left: 50%;
   margin-top: -1.125rem;
@@ -926,6 +945,7 @@ form {
   z-index: 1;
 }
 
+/* LOADING */
 #contactButton.loading {
   -webkit-animation: button-loading 0.5s forwards;
           animation: button-loading 0.5s forwards;
@@ -943,6 +963,8 @@ form {
           animation: button-dot-pulse 1.5s infinite 0.5s;
 }
 
+/*  */
+/* READY */
 #contactButton.ready {
   text-indent: 0;
   color: transparent;
@@ -961,7 +983,7 @@ form {
   height: auto;
   border-radius: 0;
   background-color: transparent;
-  color: #8cce1e !important;
+  color: var(--contactButton__success);
   content: "success!";
   opacity: 0;
   z-index: 2;
@@ -975,6 +997,8 @@ form {
           animation: button-dot-outro 0.333s;
 }
 
+/*  */
+/* ERROR */
 #contactButton.error {
   text-indent: 0;
   color: transparent;
@@ -993,7 +1017,7 @@ form {
   height: auto;
   border-radius: 0;
   background-color: transparent;
-  color: #ce3e1e;
+  color: var(--contactButton__error);
   content: "error";
   opacity: 0;
   z-index: 2;
@@ -1005,6 +1029,88 @@ form {
   opacity: 1;
   -webkit-animation: button-dot-outro 0.333s;
           animation: button-dot-outro 0.333s;
+}
+
+/*  */
+/* TRY AGAIN */
+#contactButton.tryAgain {
+  text-indent: 0;
+  color: transparent;
+  background-color: var(--accent);
+  -webkit-animation: button-tryAgain 0.333s forwards;
+          animation: button-tryAgain 0.333s forwards;
+}
+
+#contactButton.tryAgain:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  margin: 0;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--accent);
+  content: "try again";
+  opacity: 0;
+  z-index: 2;
+  -webkit-animation: button-ready-label 0.5s forwards 0.275s;
+          animation: button-ready-label 0.5s forwards 0.275s;
+}
+
+#contactButton.tryAgain:after {
+  opacity: 1;
+  -webkit-animation: button-dot-outro 0.333s;
+          animation: button-dot-outro 0.333s;
+}
+
+/*  */
+@-webkit-keyframes button-tryAgain {
+  0% {
+    margin-left: 1.25rem;
+    width: 2.5rem;
+  }
+  10% {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+  70% {
+    margin: 0;
+    width: 7.25rem;
+    background-color: var(--contactForm);
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    margin: 0;
+    width: 7rem;
+    border-color: var(--accent);
+    background-color: var(--contactForm);
+  }
+}
+@keyframes button-tryAgain {
+  0% {
+    margin-left: 1.25rem;
+    width: 2.5rem;
+  }
+  10% {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+  70% {
+    margin: 0;
+    width: 7.25rem;
+    background-color: var(--contactForm);
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    margin: 0;
+    width: 7rem;
+    border-color: var(--accent);
+    background-color: var(--contactForm);
+  }
 }
 
 @-webkit-keyframes button-loading {
@@ -1153,15 +1259,15 @@ form {
   70% {
     margin: 0;
     width: 7.25rem;
-    background-color: #fff;
+    background-color: var(--contactForm);
     -webkit-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1);
   }
   100% {
     margin: 0;
     width: 7rem;
-    border-color: #8cce1e;
-    background-color: #fff;
+    border-color: var(--contactButton__success);
+    background-color: var(--contactForm);
   }
 }
 
@@ -1177,15 +1283,15 @@ form {
   70% {
     margin: 0;
     width: 7.25rem;
-    background-color: #fff;
+    background-color: var(--contactForm);
     -webkit-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1);
   }
   100% {
     margin: 0;
     width: 7rem;
-    border-color: #8cce1e;
-    background-color: #fff;
+    border-color: var(--contactButton__success);
+    background-color: var(--contactForm);
   }
 }
 
@@ -1201,15 +1307,15 @@ form {
   70% {
     margin: 0;
     width: 7.25rem;
-    background-color: #fff;
+    background-color: var(--contactForm);
     -webkit-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1);
   }
   100% {
     margin: 0;
     width: 7rem;
-    border-color: #ce3e1e;
-    background-color: #fff;
+    border-color: var(--contactButton__error);
+    background-color: var(--contactForm);
   }
 }
 
@@ -1225,15 +1331,15 @@ form {
   70% {
     margin: 0;
     width: 7.25rem;
-    background-color: #fff;
+    background-color: var(--contactForm);
     -webkit-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1);
   }
   100% {
     margin: 0;
     width: 7rem;
-    border-color: #ce3e1e;
-    background-color: #fff;
+    border-color: var(--contactButton__error);
+    background-color: var(--contactForm);
   }
 }
 
