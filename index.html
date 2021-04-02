@@ -24,6 +24,9 @@
     <!-- CUSTOM -->
     <link rel="stylesheet" media="screen" href="styles/style.css">
 
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <!-- DARK MODE CONTAINER -->
@@ -1192,9 +1195,10 @@
                                     <div class="form-group mb-5">
                                         <textarea class="form-control formInput" id="exampleFormControlTextarea1" rows="3" placeholder="Message..." name='message' required></textarea>
                                     </div>
-                                    <!-- <input type='submit' id='contactButton' value='Submit'>  -->
+                                    
+                                    <div class="g-recaptcha d-flex justify-content-center mb-5" data-sitekey="6LdKs5kaAAAAAIC9hXK3oG4emwTkRMnLC8T6BdCC" data-theme="dark"></div> 
 
-                                    <button id='contactButton' class='' type="submit"> SEND </button>
+                                    <button id='contactButton' type="submit"> SEND </button>
                                 </form>
                             </div>
                     </div>
