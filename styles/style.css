@@ -1449,7 +1449,7 @@ form {
     margin-top: 1.4px;
     margin-right: 1px;
   }
-  .socialBtnEnglish {
+  .socialBtnEnglish, .socialBtnFrench {
     -webkit-transition: .3s ease;
     transition: .3s ease;
     width: 44px;
